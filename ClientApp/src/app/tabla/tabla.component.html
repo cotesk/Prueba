@@ -1,0 +1,71 @@
+<p>tabla works!</p>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+  <div class="container ">
+
+    <div class="col-sm-14 main-section">
+      <div class="modal-content ">
+        <form class="col-36">
+
+       
+
+         
+
+          <div class="container">
+            <h2 style="text-align: center">Tabla de Libro</h2>
+                     
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                    <tr>
+                    <th>Id</th>
+                    <th>Cedula</th>
+                    <th>ValorServivcio</th>
+                    <th>Salario</th>
+                    <th>Tarifa</th>
+                    <th>ValorCopago</th>
+                    <th>Ver</th>
+                    </tr>
+                    </thead>
+                    <tr *ngFor="let paciente of pacientes">
+                      <td>{{paciente.id}}</td>
+                      <td>{{paciente.cedula}}</td>
+                    <td>{{paciente.valorServivcio}}</td>
+                    <td>{{paciente.salario}}</td>
+                    <td>{{paciente.tarifa}}</td>
+                    <td>{{paciente.valorCopago}}</td>
+                    <td><a routerLink="/editar/{{paciente.id}}">ver</a></td>
+                    </tr>
+
+            </table>
+            
+          </div>
+          
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
